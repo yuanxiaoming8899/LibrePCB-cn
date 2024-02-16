@@ -1,165 +1,153 @@
-# LibrePCB
-
-[![Become a Patron](https://img.shields.io/badge/Patreon-donate-orange.svg)](https://www.patreon.com/librepcb)
-[![Discourse](https://img.shields.io/badge/Discourse-discuss-blueviolet.svg)](https://librepcb.discourse.group/)
-[![Telegram](https://img.shields.io/badge/Telegram-chat-blue.svg)](https://telegram.me/LibrePCB_dev)
-[![Website](https://img.shields.io/badge/Website-librepcb.org-29d682.svg)](https://librepcb.org/)
-[![Docs](https://img.shields.io/badge/Docs-read-yellow.svg)](https://librepcb.org/docs/)
-
-[![Azure Build Status](https://dev.azure.com/LibrePCB/LibrePCB/_apis/build/status/LibrePCB.LibrePCB?branchName=master)](https://dev.azure.com/LibrePCB/LibrePCB/_build/latest?definitionId=2&branchName=master)
-[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/1652/badge)](https://bestpractices.coreinfrastructure.org/projects/1652)
-
-[![Packaging status](https://repology.org/badge/vertical-allrepos/librepcb.svg?columns=3&header=LibrePCB)](https://repology.org/project/librepcb/versions)
-
-## About LibrePCB
-
-LibrePCB is a free
-[EDA](https://en.wikipedia.org/wiki/Electronic_design_automation) suite to
-develop printed circuit boards on Windows, Linux and MacOS. More information
-and screenshots are available at [librepcb.org](https://librepcb.org).
-
-## Installation & Usage
-
-**Official stable releases are provided at our
-[download page](https://librepcb.org/download/).**
-
-**Please read our [user manual](https://librepcb.org/docs/) to see how you can
-install and use LibrePCB.** The
-[quickstart tutorial](https://librepcb.org/docs/quickstart/) provides a
-step-by-step guide through the whole process of designing a PCB.
-
-## Contributing
-
-Contributions are welcome! See
-[librepcb.org/contribute](https://librepcb.org/contribute/) and
-[`CONTRIBUTING.md`](CONTRIBUTING.md) for details.
-
-For internal details take a look at the
-[developers documentation](https://developers.librepcb.org/).
-
-## Development
-
-***WARNING: The `master` branch always contains the latest UNSTABLE version of
-LibrePCB. Everything you do with this unstable version could break your
-workspace, libraries or projects, so you should not use it productively! For
-productive use, please install an official release as described in the
-[user manual](https://librepcb.org/docs/). For development, please read details
-[here](https://developers.librepcb.org/df/d30/doc_developers.html#doc_developers_unstable_versions).***
-
-### Requirements
-
-To compile LibrePCB, you need the following software components:
-
-- g++ >= 4.8, MinGW >= 4.8, or Clang >= 3.3 (C++11 support is required)
-- [Qt](http://www.qt.io/download-open-source/) >= 5.5
-- [OpenCASCADE](https://www.opencascade.com/) OCCT or OCE (optional)
-- [OpenGL Utility Library](https://en.wikipedia.org/wiki/OpenGL_Utility_Library)
-  GLU (optional)
-- [zlib](http://www.zlib.net/)
-- [OpenSSL](https://www.openssl.org/)
-- [CMake](https://cmake.org/) 3.5 or newer
-
-#### Prepared Docker Image
-
-Instead of installing the dependencies manually on your system (see instructions
-below), you can also use one of our
-[Docker images](https://hub.docker.com/r/librepcb/librepcb-dev) with all
-dependencies pre-installed (except GUI tools like QtCreator). These images are
-actually used for CI, but are also useful to build LibrePCB locally.
-
-#### Installation on Debian/Ubuntu/Mint
-
-*Note: For Ubuntu older than 22.04, replace `qtbase5-dev` by `qt5-default`.*
-
-```bash
-sudo apt-get install build-essential git cmake openssl zlib1g zlib1g-dev \
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-librepcb" class="anchor" aria-hidden="true" tabindex="-1" href="#librepcb"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自由PCB</font></font></h1>
+<p dir="auto"><a href="https://www.patreon.com/librepcb" rel="nofollow"><img src="https://camo.githubusercontent.com/a58644641a74129de1bad3c201b16e51e05392627395c2623ae3332611d69736/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617472656f6e2d646f6e6174652d6f72616e67652e737667" alt="成为赞助人" data-canonical-src="https://img.shields.io/badge/Patreon-donate-orange.svg" style="max-width: 100%;"></a>
+<a href="https://librepcb.discourse.group/" rel="nofollow"><img src="https://camo.githubusercontent.com/a2bf9eabc2c5eb17dd4e7bedbb9949a4af265257a94532fb976522965ec5c873/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446973636f757273652d646973637573732d626c756576696f6c65742e737667" alt="话语" data-canonical-src="https://img.shields.io/badge/Discourse-discuss-blueviolet.svg" style="max-width: 100%;"></a>
+<a href="https://telegram.me/LibrePCB_dev" rel="nofollow"><img src="https://camo.githubusercontent.com/d0406af5378a917749668f37bdfaab248a24b66eba8f038a08145daa018eaaa2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f54656c656772616d2d636861742d626c75652e737667" alt="电报" data-canonical-src="https://img.shields.io/badge/Telegram-chat-blue.svg" style="max-width: 100%;"></a>
+<a href="https://librepcb.org/" rel="nofollow"><img src="https://camo.githubusercontent.com/2b66a349c86117e6b242a81cfec36e850efc6dcf30250793bed70a514abb34e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f576562736974652d6c696272657063622e6f72672d3239643638322e737667" alt="网站" data-canonical-src="https://img.shields.io/badge/Website-librepcb.org-29d682.svg" style="max-width: 100%;"></a>
+<a href="https://librepcb.org/docs/" rel="nofollow"><img src="https://camo.githubusercontent.com/6c888ef1cc990a9cc4242e732dd9c85c2b27d37d095863bcfdf1c7a4954fae5a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f63732d726561642d79656c6c6f772e737667" alt="文档" data-canonical-src="https://img.shields.io/badge/Docs-read-yellow.svg" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://dev.azure.com/LibrePCB/LibrePCB/_build/latest?definitionId=2&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/d6abfe77012c3de7107c1e3fbff9a0e584b2e108619d7be67c529f7d472aa497/68747470733a2f2f6465762e617a7572652e636f6d2f4c696272655043422f4c696272655043422f5f617069732f6275696c642f7374617475732f4c696272655043422e4c696272655043423f6272616e63684e616d653d6d6173746572" alt="Azure 构建状态" data-canonical-src="https://dev.azure.com/LibrePCB/LibrePCB/_apis/build/status/LibrePCB.LibrePCB?branchName=master" style="max-width: 100%;"></a>
+<a href="https://bestpractices.coreinfrastructure.org/projects/1652" rel="nofollow"><img src="https://camo.githubusercontent.com/2704e694cd066747ce9ce46105dae974ac57faf1805e3da52412bc396184d1de/68747470733a2f2f626573747072616374696365732e636f7265696e6672617374727563747572652e6f72672f70726f6a656374732f313635322f6261646765" alt="OpenSSF 最佳实践" data-canonical-src="https://bestpractices.coreinfrastructure.org/projects/1652/badge" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://repology.org/project/librepcb/versions" rel="nofollow"><img src="https://camo.githubusercontent.com/ff80b5ef7370edda03b64683824f206633875782a10a1225c79ed5f5876e0438/68747470733a2f2f7265706f6c6f67792e6f72672f62616467652f766572746963616c2d616c6c7265706f732f6c696272657063622e7376673f636f6c756d6e733d33266865616465723d4c69627265504342" alt="包装状态" data-canonical-src="https://repology.org/badge/vertical-allrepos/librepcb.svg?columns=3&amp;header=LibrePCB" style="max-width: 100%;"></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-about-librepcb" class="anchor" aria-hidden="true" tabindex="-1" href="#about-librepcb"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于LibrePCB</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LibrePCB 是一款免费的
+</font></font><a href="https://en.wikipedia.org/wiki/Electronic_design_automation" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDA</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">套件，用于在 Windows、Linux 和 MacOS 上开发印刷电路板。</font><font style="vertical-align: inherit;">更多信息和屏幕截图请访问</font></font><a href="https://librepcb.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">librepcb.org</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-installation--usage" class="anchor" aria-hidden="true" tabindex="-1" href="#installation--usage"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装与使用</font></font></h2>
+<p dir="auto"><strong><font style="vertical-align: inherit;"></font><a href="https://librepcb.org/download/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们的下载页面</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供了官方稳定版本
+</font><font style="vertical-align: inherit;">。</font></font></strong></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请阅读我们的</font></font><a href="https://librepcb.org/docs/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户手册</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，了解如何安装和使用 LibrePCB。</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快速
+</font></font><a href="https://librepcb.org/docs/quickstart/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门教程</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供了 PCB 设计整个过程的分步指南。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contributing" class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">欢迎贡献！</font><font style="vertical-align: inherit;">有关详细信息，
+</font><font style="vertical-align: inherit;">请参阅
+</font></font><a href="https://librepcb.org/contribute/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">librepcb.org/contribute</font></font></a><font style="vertical-align: inherit;"></font><a href="/LibrePCB/LibrePCB/blob/master/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关内部详细信息，请查看
+</font></font><a href="https://developers.librepcb.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-development" class="anchor" aria-hidden="true" tabindex="-1" href="#development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展</font></font></h2>
+<p dir="auto"><em><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">警告：该</font></font><code>master</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分支始终包含 LibrePCB 的最新不稳定版本。</font><font style="vertical-align: inherit;">您使用此不稳定版本所做的一切都可能会破坏您的工作区、库或项目，因此您不应该高效地使用它！</font></font><a href="https://librepcb.org/docs/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了高效使用，请按照用户手册</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中的说明安装官方版本
+</font><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">如需开发，请阅读
+</font></font><a href="https://developers.librepcb.org/df/d30/doc_developers.html#doc_developers_unstable_versions" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此处的</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">详细信息。</font></font></strong></em></p>
+<h3 tabindex="-1" dir="auto"><a id="user-content-requirements" class="anchor" aria-hidden="true" tabindex="-1" href="#requirements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要求</font></font></h3>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要编译 LibrePCB，您需要以下软件组件：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">g++ &gt;= 4.8、MinGW &gt;= 4.8 或 Clang &gt;= 3.3（需要 C++11 支持）</font></font></li>
+<li><a href="http://www.qt.io/download-open-source/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Qt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &gt;= 5.5</font></font></li>
+<li><a href="https://www.opencascade.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenCASCADE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> OCCT 或 OCE（可选）</font></font></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenGL_Utility_Library" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenGL实用程序库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+GLU（可选）</font></font></li>
+<li><a href="http://www.zlib.net/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">兹库</font></font></a></li>
+<li><a href="https://www.openssl.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开放式SSL</font></font></a></li>
+<li><a href="https://cmake.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMake</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 3.5 或更高版本</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-prepared-docker-image" class="anchor" aria-hidden="true" tabindex="-1" href="#prepared-docker-image"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">准备好的 Docker 镜像</font></font></h4>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://hub.docker.com/r/librepcb/librepcb-dev" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您还可以使用我们预安装了所有依赖项的Docker 映像</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">之一（除了 QtCreator 等 GUI 工具），而不是在系统上手动安装依赖项（请参阅下面的说明
+</font><font style="vertical-align: inherit;">）。</font><font style="vertical-align: inherit;">这些图像实际上用于 CI，但对于本地构建 LibrePCB 也很有用。</font></font></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-installation-on-debianubuntumint" class="anchor" aria-hidden="true" tabindex="-1" href="#installation-on-debianubuntumint"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Debian/Ubuntu/Mint 上安装</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：对于 22.04 之前的 Ubuntu，请替换</font></font><code>qtbase5-dev</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为</font></font><code>qt5-default</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.</font></font></em></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>sudo apt-get install build-essential git cmake openssl zlib1g zlib1g-dev \
+     qtbase5-dev qtdeclarative5-dev qttools5-dev-tools qttools5-dev \
+     qtquickcontrols2-5-dev libqt5opengl5-dev libqt5svg5-dev \
+     libglu1-mesa-dev liboce-<span class="pl-k">*</span>-dev
+sudo apt-get install qt5-doc qtcreator <span class="pl-c"><span class="pl-c">#</span> optional</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="sudo apt-get install build-essential git cmake openssl zlib1g zlib1g-dev \
      qtbase5-dev qtdeclarative5-dev qttools5-dev-tools qttools5-dev \
      qtquickcontrols2-5-dev libqt5opengl5-dev libqt5svg5-dev \
      libglu1-mesa-dev liboce-*-dev
-sudo apt-get install qt5-doc qtcreator # optional
-```
-
-#### Installation on Arch Linux
-
-```bash
-sudo pacman -S base-devel git cmake openssl zlib desktop-file-utils shared-mime-info \
+sudo apt-get install qt5-doc qtcreator # optional" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h4 tabindex="-1" dir="auto"><a id="user-content-installation-on-arch-linux" class="anchor" aria-hidden="true" tabindex="-1" href="#installation-on-arch-linux"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Arch Linux 上安装</font></font></h4>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>sudo pacman -S base-devel git cmake openssl zlib desktop-file-utils shared-mime-info \
      qt5-base qt5-declarative qt5-quickcontrols2 qt5-svg qt5-tools opencascade
-sudo pacman -S qt5-doc qtcreator # optional
-```
-
-*Note: Instead of installing the dependencies and building LibrePCB manually,
-you could install the package
-[librepcb-git](https://aur.archlinux.org/packages/librepcb-git/) from the AUR.
-The package clones and builds the latest version of the `master` branch from
-GitHub.*
-
-#### Installation on Mac OS X
-
-1. Install Xcode through the app store and start it at least once (for the license)
-2. Install [homebrew](https://github.com/Homebrew/brew) (**the** package manager)
-3. Install dependencies: `brew update && brew install qt5 cmake opencascade`
-4. Make the toolchain available: `brew unlink qt && brew link --force qt5`
-
-#### Installation on Windows
-
-Download and run the
-[Qt for Windows (MinGW) installer](http://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-mingw530-5.8.0.exe)
-from [here](https://www.qt.io/download-open-source/). LibrePCB does not compile
-with MSVC, so you must install following components with the Qt installer:
-
-- The MinGW compiler itself
-- The Qt libraries for MinGW
-- cmake
-
-For the OpenCascade library the installation procedure is not that easy
-unfortunately. Basically you have to build it by yourself, see instructions
-[here](https://dev.opencascade.org/doc/overview/html/build_upgrade__building_occt.html).
-However, to avoid this effort you could instead just set the CMake option
-`USE_OPENCASCADE=0` (can be set in the QtCreator build config) to allow
-compiling LibrePCB without OpenCascade.
-
-### Cloning
-
-It's important to clone the repository recursively to get all submodules too:
-
-```bash
-git clone --recursive https://github.com/LibrePCB/LibrePCB.git && cd LibrePCB
-```
-
-### Updating
-
-When updating the repository, make sure to also update all the submodules
-recursively. Otherwise you may get strange compilation errors:
-
-```bash
-git submodule update --init --recursive
-```
-
-### Building
-
-You can either build LibrePCB using Qt Creator, or you can build on the command
-line using cmake. To build LibrePCB using cmake/make:
-
-```bash
-mkdir build && cd build
+sudo pacman -S qt5-doc qtcreator <span class="pl-c"><span class="pl-c">#</span> optional</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="sudo pacman -S base-devel git cmake openssl zlib desktop-file-utils shared-mime-info \
+     qt5-base qt5-declarative qt5-quickcontrols2 qt5-svg qt5-tools opencascade
+sudo pacman -S qt5-doc qtcreator # optional" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：您可以从 AUR安装</font></font><a href="https://aur.archlinux.org/packages/librepcb-git/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">librepcb-git</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包，而不是手动安装依赖项和构建 LibrePCB
+ 。</font><font style="vertical-align: inherit;">该包从 GitHub 克隆并构建最新版本的分支</font></font><code>master</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></em></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-installation-on-mac-os-x" class="anchor" aria-hidden="true" tabindex="-1" href="#installation-on-mac-os-x"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Mac OS X 上安装</font></font></h4>
+<ol dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过应用商店安装 Xcode 并至少启动一次（用于许可证）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font><a href="https://github.com/Homebrew/brew"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自制程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">管理器）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装依赖项：</font></font><code>brew update &amp;&amp; brew install qt5 cmake opencascade</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使工具链可用：</font></font><code>brew unlink qt &amp;&amp; brew link --force qt5</code></li>
+</ol>
+<h4 tabindex="-1" dir="auto"><a id="user-content-installation-on-windows" class="anchor" aria-hidden="true" tabindex="-1" href="#installation-on-windows"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Windows 上安装</font></font></h4>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从</font><a href="https://www.qt.io/download-open-source/" rel="nofollow"><font style="vertical-align: inherit;">此处</font></a><font style="vertical-align: inherit;">下载并运行
+</font></font><a href="http://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-mingw530-5.8.0.exe" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Qt for Windows (MinGW) 安装程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">LibrePCB 不使用 MSVC 进行编译，因此您必须使用 Qt 安装程序安装以下组件：</font></font><a href="https://www.qt.io/download-open-source/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MinGW 编译器本身</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MinGW 的 Qt 库</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cmake</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不幸的是，对于 OpenCascade 库，安装过程并不那么容易。</font><font style="vertical-align: inherit;">基本上你必须自己构建它，请参阅
+</font></font><a href="https://dev.opencascade.org/doc/overview/html/build_upgrade__building_occt.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此处的</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">说明。</font><font style="vertical-align: inherit;">但是，为了避免这种工作，您可以只设置 CMake 选项
+</font></font><code>USE_OPENCASCADE=0</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（可以在 QtCreator 构建配置中设置）以允许在不使用 OpenCascade 的情况下编译 LibrePCB。</font></font></p>
+<h3 tabindex="-1" dir="auto"><a id="user-content-cloning" class="anchor" aria-hidden="true" tabindex="-1" href="#cloning"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">克隆</font></font></h3>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">递归克隆存储库以获取所有子模块也很重要：</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>git clone --recursive https://github.com/LibrePCB/LibrePCB.git <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">cd</span> LibrePCB</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone --recursive https://github.com/LibrePCB/LibrePCB.git &amp;&amp; cd LibrePCB" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h3 tabindex="-1" dir="auto"><a id="user-content-updating" class="anchor" aria-hidden="true" tabindex="-1" href="#updating"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更新中</font></font></h3>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更新存储库时，请确保也递归更新所有子模块。</font><font style="vertical-align: inherit;">否则你可能会得到奇怪的编译错误：</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>git submodule update --init --recursive</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git submodule update --init --recursive" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h3 tabindex="-1" dir="auto"><a id="user-content-building" class="anchor" aria-hidden="true" tabindex="-1" href="#building"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建筑</font></font></h3>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以使用 Qt Creator 构建 LibrePCB，也可以使用 cmake 在命令行上构建。</font><font style="vertical-align: inherit;">使用 cmake/make 构建 LibrePCB：</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>mkdir build <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">cd</span> build
 cmake ..
-make -j8
-```
-
-The binary can then be found in `build/apps/librepcb/`.
-
-For more detailed instructions (including how to set up Qt Creator), see
-https://developers.librepcb.org/d5/d96/doc_building.html
-
-## Credits
-
-- First of all, many thanks to all of our [contributors](AUTHORS.md)!
-- A big thank you goes to all [our sponsors](https://librepcb.org/sponsors/)
-  which help to keep this project alive!
-- Special thanks also to [cloudscale.ch](https://www.cloudscale.ch/)
-  for sponsoring our API server!
-
-## License
-
-LibrePCB is published under the
-[GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0.html) license.
+make -j8</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="mkdir build &amp;&amp; cd build
+cmake ..
+make -j8" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">然后可以在 中找到该二进制文件</font></font><code>build/apps/librepcb/</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关更详细的说明（包括如何设置 Qt Creator），请参阅
+</font></font><a href="https://developers.librepcb.org/d5/d96/doc_building.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://developers.librepcb.org/d5/d96/doc_building.html</font></font></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-credits" class="anchor" aria-hidden="true" tabindex="-1" href="#credits"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">制作人员</font></font></h2>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">首先，非常感谢所有</font></font><a href="/LibrePCB/LibrePCB/blob/master/AUTHORS.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献者</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">！</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">非常感谢</font></font><a href="https://librepcb.org/sponsors/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们所有的赞助商</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+，他们帮助我们保持了这个项目的活力！</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还要特别感谢</font></font><a href="https://www.cloudscale.ch/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cloudscale.ch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+赞助我们的 API 服务器！</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-license" class="anchor" aria-hidden="true" tabindex="-1" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="http://www.gnu.org/licenses/gpl-3.0.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LibrePCB 在GNU GPLv3</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可证下发布
+</font><font style="vertical-align: inherit;">。</font></font></p>
+</article></div>
